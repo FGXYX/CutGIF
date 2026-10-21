@@ -10,6 +10,7 @@
 - 当前 APK：`app/build/outputs/apk/debug/app-debug.apk`（约 48 MB，FFmpegKit video 库占主要体积）。
 - 远程仓库：`https://github.com/FGXYX/CutGIF.git`，默认分支 `main`。
 - 界面语言：简体中文；README 提供中文和英文两个版本。
+- 项目代码许可证：**Apache License 2.0**（`LICENSE` / `NOTICE`）；第三方许可见 `THIRD_PARTY_NOTICES.md` 和 `licenses/`。
 
 ## 1. 项目定位
 
@@ -180,6 +181,9 @@ GIF 编辑手工回归：
 - [ ] 不把机器专用代理写入 `gradle.properties`。
 - [ ] 不提交 `*.apk`（构建产物由本地生成；如确需发布，放到 GitHub Releases，不要塞进源码）。
 - [ ] 源码、`gradle/wrapper`、README、docs 截图、`1.jpg` 图标源文件可上传。
+- [ ] `LICENSE`、`NOTICE`、`THIRD_PARTY_NOTICES.md` 和 `licenses/` 已包含，且没有被误删。
+- [ ] 若修改依赖或 FFmpegKit 变体，同步更新第三方声明和许可证文本。
+- [ ] 对外分发 APK 时检查 FFmpeg/FFmpegKit 的 LGPL 源码提供、许可证保留和可替换/重链接要求。
 - [ ] 推送后确认远程 `main` 的提交和文件列表。
 
 首次上传：
@@ -202,6 +206,16 @@ git push
 ```
 
 不要对空仓库使用 `--force`，也不要在未确认远程内容前强推。
+
+### 开源协议与第三方合规
+
+- 应用代码：Apache License 2.0，根目录 `LICENSE`；版权声明在 `NOTICE`。
+- FFmpegKit maintained：LGPL-3.0，文本在 `licenses/LGPL-3.0.txt`。
+- FFmpeg：LGPL-2.1+，文本在 `licenses/LGPL-2.1.txt`。
+- libdav1d：BSD-2-Clause；libvpx / smart-exception-java：BSD-3-Clause，文本在 `licenses/`。
+- 不要删除或弱化 `THIRD_PARTY_NOTICES.md` 中的归属和 LGPL 分发说明。
+- Apache-2.0 不会替代 FFmpeg/FFmpegKit 的 LGPL 义务；发布 APK 前必须单独核对。
+- 本文件与 README 的说明不构成法律意见。
 
 ## 8. 已知限制
 

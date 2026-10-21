@@ -184,11 +184,21 @@ adb logcat -d -s CutGifExport:V > cutgif-export.log
 
 ## 第三方组件
 
+完整清单、版权声明和 LGPL 分发注意事项见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
 - [FFmpegKit maintained](https://github.com/ffmpegkit-maintained/ffmpeg)（LGPL-3.0，`ffmpeg-kit-video` 变体）：FFmpeg 原生解码（含 libdav1d AV1 软件解码）、fps / crop / scale / palette 滤镜和 GIF 编码。
-- [FFmpeg](https://ffmpeg.org/)（LGPL）：多媒体框架。
+- [FFmpeg](https://ffmpeg.org/)（LGPL-2.1+）：多媒体框架。
+- libdav1d（BSD-2-Clause）与 libvpx（BSD-3-Clause）：视频编解码。
 - smart-exception-java（BSD-3-Clause）：FFmpegKit 异常信息依赖。
+- AndroidX / Jetpack Compose / Media3 / Kotlin（Apache-2.0）。
 
 GIF 导出的思路参考了 [CuteGIF](https://github.com/tasy5kg/CuteGIF) 使用 FFmpeg `fps` + `palettegen` / `paletteuse` 的方案；本项目独立实现，并使用 LGPL 版本的 FFmpegKit。
+
+## 开源协议
+
+CutGIF 应用代码采用 [Apache License 2.0](LICENSE)，Copyright 2026 FGXYX。
+
+第三方组件、FFmpeg/FFmpegKit 和编解码库分别遵循其自身许可证；完整版权声明、许可证文本和分发注意事项见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与 [`licenses/`](licenses/)。对外分发包含 FFmpeg 的 APK 前，请确认 LGPL 的源码提供、许可证保留和可替换/重链接要求。
 
 ## 说明
 

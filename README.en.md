@@ -184,11 +184,21 @@ If the exported frame count looks wrong, also include:
 
 ## Third-party components
 
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the complete list, copyright notices, and LGPL distribution notes.
+
 - [FFmpegKit maintained](https://github.com/ffmpegkit-maintained/ffmpeg) (LGPL-3.0, `ffmpeg-kit-video` variant): FFmpeg native decoding (including libdav1d AV1 software decoding), fps / crop / scale / palette filters, and GIF encoding.
-- [FFmpeg](https://ffmpeg.org/) (LGPL): multimedia framework.
+- [FFmpeg](https://ffmpeg.org/) (LGPL-2.1+): multimedia framework.
+- libdav1d (BSD-2-Clause) and libvpx (BSD-3-Clause): video codecs.
 - smart-exception-java (BSD-3-Clause): exception-reporting dependency used by FFmpegKit.
+- AndroidX / Jetpack Compose / Media3 / Kotlin (Apache-2.0).
 
 The GIF export approach was informed by [CuteGIF](https://github.com/tasy5kg/CuteGIF), which uses FFmpeg `fps` + `palettegen` / `paletteuse`. This project is an independent implementation and uses the LGPL FFmpegKit variant.
+
+## License
+
+CutGIF application code is licensed under the [Apache License 2.0](LICENSE), Copyright 2026 FGXYX.
+
+Third-party components, FFmpeg/FFmpegKit, and codec libraries remain under their respective licenses. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and [`licenses/`](licenses/) for notices, license texts, and distribution notes. Before distributing an APK containing FFmpeg, verify LGPL source-availability, notice-retention, and relinking/replacement requirements.
 
 ## Notes
 
